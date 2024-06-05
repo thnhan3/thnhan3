@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository
-      - uses: actions/checkout@v2
-
       - uses: Platane/snk@v3
       with:
         # github user name to read the contribution graph from (**required**)
@@ -32,19 +29,3 @@ jobs:
           dist/github-snake.svg
           dist/github-snake-dark.svg?palette=github-dark
           dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
-
-      # Commit and push the changes
-      - name: Commit and Push changes
-        run: |
-          git config --global user.name "thnhan3"
-          git config --global user.email "huunhantran10@gmail.com"
-          git add .
-          git commit -m "Update snake picture"
-          git push origin master
-
-      # Deploy to GitHub Pages
-      - uses: crazy-max/ghaction-github-pages@v2.1.3
-        with:
-          target_branch: output
-          build_dir: dist
-          GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
