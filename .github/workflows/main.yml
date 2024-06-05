@@ -2,8 +2,8 @@ name: Generate Snake
 
 on:
   schedule:
-    # Run every 6 hours
-    - cron: "0 */6 * * *"
+    # Run twice a day
+    - cron: "0 0,12 * * *"
 
 jobs:
   build:
@@ -21,16 +21,14 @@ jobs:
           gif_out_path: dist/github-contribution-grid-snake.gif
           svg_out_path: dist/github-contribution-grid-snake.svg
 
-      # Show the status of the build (for debugging)
-      - run: git add .
-
-      # Push the changes
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.SECRET_TOKEN }}
-          branch: master
-          force: true
+      # Commit and push the changes
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "thnhan3"
+          git config --global user.email "huunhantran10@gmail.com"
+          git add .
+          git commit -m "Update snake picture"
+          git push origin master
 
       # Deploy to GitHub Pages
       - uses: crazy-max/ghaction-github-pages@v2.1.3
