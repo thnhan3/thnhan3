@@ -1,0 +1,37 @@
+name: update-profile-daily
+
+on:
+  # Run automatically everyday at 00:05 AM UTC (7:05 AM +07)
+  schedule:
+    - cron: "5 0 * * *"
+  
+  # Allows to manually run the job at any time
+  workflow_dispatch:
+
+  # Run on every push on the main branch
+  push:
+    branches: ["main"]
+
+# Only a single workflow in the same concurrency will run at the same time
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.head_ref || github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  update_github_profile_readme:
+    runs-on: ubuntu-latest
+    name: Generate assets and update README
+    permissions:
+      contents: write
+    timeout-minutes: 5
+    steps:
+ 
+      # Generate contribution snake animation
+      - name: Generate contribution snake animation
+        id: snake
+        uses: Platane/snk@v3.0.0
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/github-contribution-grid-snake.svg
+            assets/github-contribution-grid-snake-dark.svg?palette=github-dark
