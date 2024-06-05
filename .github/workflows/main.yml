@@ -1,37 +1,34 @@
-name: update-profile-daily
+name: Update Profile README
 
 on:
-  # Run automatically everyday at 00:05 AM UTC (7:05 AM +07)
   schedule:
-    - cron: "5 0 * * *"
-  
-  # Allows to manually run the job at any time
-  workflow_dispatch:
-
-  # Run on every push on the main branch
-  push:
-    branches: ["main"]
-
-# Only a single workflow in the same concurrency will run at the same time
-concurrency:
-  group: '${{ github.workflow }} @ ${{ github.head_ref || github.ref }}'
-  cancel-in-progress: true
+    - cron: "5 0 * * *" # Chạy mỗi ngày vào lúc 00:05 AM UTC (7:05 AM +07)
 
 jobs:
-  update_github_profile_readme:
+  update_readme:
     runs-on: ubuntu-latest
-    name: Generate assets and update README
-    permissions:
-      contents: write
-    timeout-minutes: 5
     steps:
- 
-      # Generate contribution snake animation
-      - name: Generate contribution snake animation
-        id: snake
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Generate Snake Animation
         uses: Platane/snk@v3.0.0
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             assets/github-contribution-grid-snake.svg
             assets/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Update README
+        run: |
+          echo "### GitHub Stats" >> README.md
+          echo "" >> README.md
+          echo '<img src="assets/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake" width="500" />' >> README.md
+          echo "" >> README.md
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update contribution snake"
+          commit_user_name: "GitHub Action"
+          commit_user_email: "action@github.com"
