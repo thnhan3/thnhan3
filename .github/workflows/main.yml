@@ -16,19 +16,12 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            assets/github-contribution-grid-snake.svg
-            assets/github-contribution-grid-snake-dark.svg?palette=github-dark
+            github-contribution-grid-snake.svg
+            github-contribution-grid-snake-dark.svg?palette=github-dark
 
       - name: Update README
         run: |
           echo "### GitHub Stats" >> README.md
           echo "" >> README.md
-          echo '<img src="assets/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake" width="500" />' >> README.md
+          echo '<img src="/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake" width="500" />' >> README.md
           echo "" >> README.md
-
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "Update contribution snake"
-          commit_user_name: "GitHub Action"
-          commit_user_email: "action@github.com"
