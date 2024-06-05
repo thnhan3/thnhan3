@@ -1,12 +1,5 @@
-<details open>
-  <summary><b>🐍 Contribution grid snake animation</b></summary>
-
-  <div align="center">
-    <picture>
-      <img src="./dist/github-contribution-grid-snake.svg" alt="Github contribution grid snake animation">
-    </picture>
-  </div>
-  <div align="right">
-
-  *generated with [Platane/snk](https://github.com/Platane/snk)*
-  </div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="github-snake.svg" />
+  <img alt="github-snake" src="github-snake.svg" />
+</picture>
