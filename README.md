@@ -1,28 +1,30 @@
-<h1 align="center">Who is Nhan</h1>
-<img src="https://i.pinimg.com/originals/3a/e7/52/3ae7525b898c8a82210799255f72ec61.gif" width="240" height="240" alt="pepe gif" />
-<h3 align="center">He is a passionate software developer from Ho Chi Minh City, Vietnam</h3>
-
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=thnhan3&label=Profile%20views&color=0e75b6&style=flat" alt="thnhan3" /> </p>
-
-- 🔭 Nhan currently working on **His Project**
-
-- 🌱 I’m currently learning **Java,NestJS, Golang, and Business**
-
-- 📝 I regularly write articles on [thnhan3.wordpress.com](thnhan3.wordpress.com)
-
-- 💬 Ask me about <b>Java</b>, <b>Web Service</b>
-
-- ⚡ Fun fact **I used to be a member of competite programming class for gift student**
-
-</p>
+<h1><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=28&pause=900&color=03AED2&random=false&width=435&lines=Welcome+to+Nhan's+GitHub" alt="Typing SVG" /></a></h1>
+<div align="center>
+  <img src="https://i.pinimg.com/originals/3a/e7/52/3ae7525b898c8a82210799255f72ec61.gif" width="240" height="240" alt="pepe gif" />
+  <h3 align="center">He is a passionate software developer from Ho Chi Minh City, Vietnam</h3>
+  
+  <p align="left"> <img src="https://komarev.com/ghpvc/?username=thnhan3&label=Profile%20views&color=0e75b6&style=flat" alt="thnhan3"/> </p>
+  
+  <p>
+    
+  - 🔭 Nhan currently working on **His Project**
+    
+  - 🌱 I’m currently learning **Java,NestJS, Golang, and Business**
+    
+  - 📝 I regularly write articles on [thnhan3.wordpress.com](thnhan3.wordpress.com)
+    
+  - 💬 Ask me about <b>Java</b>, <b>Web Service</b>
+  
+  - ⚡ Fun fact **I used to be a member of competite programming class for gift student**
+    
+  </p>
+</div>
 <div align="center">
   <h2>🐍 My Contributions </h2>
   <br>
   <img alt="snake eating my contributions" src="https://github.com/thnhan3/thnhan3/blob/output/github-contribution-grid-snake.svg" />
-  
-  <br/><br/><br/>
+  <br/>
 </div>
-
 <h3 align="left">Languages and Tools:</h3>
 <p align="left">
         <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">
