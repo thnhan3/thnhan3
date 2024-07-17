@@ -12,7 +12,7 @@
   technologies: {
     frontEnd: ["React", "NextJS"],
     backEnd: ["Spring Boot", "NestJs", "Gin"],
-    databases: ["SQL", "NoSQL"],
+    databases: ["Postgresql", "mongo"],
   },
   currentOccupation: ["Backend Developer"],
 };
@@ -20,9 +20,20 @@
 
 <div>
   <h2>🐍 My Contributions </h2>
-  <br>
-  <img alt="snake eating my contributions" src="https://github.com/thnhan3/thnhan3/blob/output/github-contribution-grid-snake.gif" />
-  <br/>
+  <picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://github.com/thnhan3/thnhan3/blob/output/github-contribution-grid-snake-dark.svg"
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="https://github.com/thnhan3/thnhan3/blob/output/github-contribution-grid-snake.svg"
+  />
+  <img
+    alt="github contribution grid snake animation"
+    src="https://github.com/thnhan3/thnhan3/blob/output/output/github-contribution-grid-snake.svg"
+  />
+</picture>
 </div>
 
 ![Huu NHan's GitHub stats](https://github-readme-stats.vercel.app/api?username=thnhan3&show_icons=true&theme=transparent)
