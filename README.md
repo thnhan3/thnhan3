@@ -2,21 +2,6 @@
 <div align="center>
   <p align="left"> <img src="https://komarev.com/ghpvc/?username=thnhan3&label=Profile%20views&color=0e75b6&style=flat" alt="thnhan3"/> </p>
 </div>
- 
- ```js
-  const me = {
-  name: "Huu Nhan",
-  surname: "Tran",
-  description: "A passionate software developer from Ho Chi Minh City, Vietnam",
-  programingLanguages: ["Java", "TypeScript", "Go", "Python"],
-  technologies: {
-    frontEnd: ["React", "NextJS"],
-    backEnd: ["Spring Boot", "NestJs", "Gin"],
-    databases: ["Postgresql", "mongo"],
-  },
-  currentOccupation: ["Backend Developer"],
-};
-```
 
 <div>
   <h2>🐍 My Contributions </h2>
